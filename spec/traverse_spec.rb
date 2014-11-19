@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'pry-byebug'
 
 describe Traverse do
 
@@ -47,7 +48,7 @@ describe Traverse do
     expect(captured_results).to eq %w{A C E D B H I G F}
   end
 
-  it "traverses with level-order", :pending => "Extension!" do
+  it "traverses with level-order" do
     Traverse.with_levelorder(sample_tree)
     expect(captured_results).to eq %w{F B G A D I C E H}
   end
